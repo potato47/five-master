@@ -40,7 +40,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "d3e30435-36f8-44d7-9368-70a1453e6432",
+    "_id": "0d1a4018-a009-4f2a-b8ba-25ffb493752c",
     "autoReleaseAssets": false
   },
   {
@@ -89,7 +89,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "0cdf2alwMRO7ZNQE32G/76F",
+    "_id": "94fa8XzwkFPOqDtoFqsuTls",
     "_active": true,
     "_components": [
       {
@@ -104,7 +104,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "loading_tip",
+    "_name": "New Label",
     "_objFlags": 0,
     "_opacity": 255,
     "_color": {
@@ -125,7 +125,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 351.41,
+      "width": 386.68,
       "height": 80
     },
     "_children": [],
@@ -144,7 +144,7 @@
     "_globalZOrder": 0,
     "_tag": -1,
     "_opacityModifyRGB": false,
-    "_id": "adf3bpf3HxBfqxs7dUm1jRz",
+    "_id": "0efcc+rN8lCDqfpRH9wZiLA",
     "_active": true,
     "_components": [
       {
@@ -169,7 +169,7 @@
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
-    "_N$string": "Loading...",
+    "_N$string": "正在匹配...",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$overflow": 0
@@ -191,7 +191,7 @@
     "_fitHeight": false
   },
   {
-    "__type__": "e1d16OofXNMJpwTGYQJMTQl",
+    "__type__": "e18eawAKF1CUa0jlWlP5h+U",
     "_name": "",
     "_objFlags": 0,
     "node": {
