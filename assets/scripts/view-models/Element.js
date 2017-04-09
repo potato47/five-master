@@ -44,11 +44,13 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        
     },
 
     init() {
-
+        let i = Math.floor(Math.random()*5)+1;
+        this.type = i;
+        this.state = STATE.HIDE;
     },
 
     updateStateView() {

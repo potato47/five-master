@@ -26,8 +26,9 @@ cc.Class({
             this.elementsLayout.addChild(elementNode);
             let element = elementNode.getComponent("Element");
             this.elements[i] = element;
-            element.state = ELEMENT_STATE.SHOW;
-            element.type = ELEMENT_TYPE.WATER;
+            // element.state = ELEMENT_STATE.SHOW;
+            // element.type = ELEMENT_TYPE.WATER;
+            element.init();
             elementNode.on("touchstart",()=>{
                 this.onElementTouch(element);
             });
@@ -35,6 +36,6 @@ cc.Class({
     },
 
     onElementTouch(element){
-        cc.log(element);
+        element.state = ELEMENT_STATE.SHOW;
     }
 });
