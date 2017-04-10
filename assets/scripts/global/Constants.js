@@ -17,9 +17,29 @@ const ELEMENT_TYPE = cc.Enum({
 });
 const ELEMENT_STATE = cc.Enum({
     HIDE: -1,
-    SHOW: -1
+    SHOW: -1,
+    SELECTED:-1
+});
+const ELEMENT_PLACE =  cc.Enum({
+    RED:-1,
+    BLUE:-1
+}); 
+const GAME_STATE = cc.Enum({
+    NONE:-1,
+    PREPARE:-1,
+    PLAY:-1,
+    OVER:-1
+});
+const USER_ACTION = cc.Enum({
+    NONE:-1,
+    TOUCH_FIRST_ELEMENT:-1,
+    TOUCH_CANCEL:-1,
+    TOUCH_SECOND_ELEMENT:-1
 });
 module.exports = {
     ELEMENT_TYPE: ELEMENT_TYPE,
-    ELEMENT_STATE: ELEMENT_STATE
+    ELEMENT_STATE: ELEMENT_STATE,
+    ELEMENT_PLACE: ELEMENT_PLACE,
+    GAME_STATE:GAME_STATE,
+    USER_ACTION:USER_ACTION
 }

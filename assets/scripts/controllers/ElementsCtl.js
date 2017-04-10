@@ -1,6 +1,7 @@
 const CONSTANTS = require("Constants");
 const ELEMENT_TYPE = CONSTANTS.ELEMENT_TYPE;
 const ELEMENT_STATE = CONSTANTS.ELEMENT_STATE;
+const USER_ACTION = CONSTANTS.USER_ACTION;
 cc.Class({
     extends: cc.Component,
 
@@ -33,9 +34,22 @@ cc.Class({
                 this.onElementTouch(element);
             });
         }
+        this.userAction = USER_ACTION.NONE;
     },
 
     onElementTouch(element){
-        element.state = ELEMENT_STATE.SHOW;
+        if(element.state === ELEMENT_STATE.HIDE){
+            if(this.elementAction === "啥也没干"){
+                this.elementAction = "点开一个方块";
+            }else if(this.elementAction === "移动一个方块第一步"){
+                this.elementAction = "移动一个方块第二步";
+            }
+        }else if(element.state === ELEMENT_STATE.SHOW){
+            this.elementAction = "移动一个方块第一步";
+        }else if(element.state === ELEMENT_STATE.SELECTED){
+            this.elementAction = "取消移动一个方块";
+        }
+        element.show(this.game.curTurn);
+        this.game.changeTurn();
     }
 });
