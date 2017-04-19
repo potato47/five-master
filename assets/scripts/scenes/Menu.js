@@ -2,16 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //    default: null,      // The default value will be used only when the component attaching
-        //                           to a node for the first time
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
+        testLabel: cc.Label
     },
 
     // use this for initialization
@@ -19,7 +10,20 @@ cc.Class({
 
     },
 
-    onBtnPlay(){
+    onBtnPlay() {
         cc.director.loadScene("match");
+        // cc.loader.load('http://www.potato47.cn/config/test.json', (err, config) => {
+        //     this.testLabel.string = JSON.stringify(config)
+        //     // cc.log(JSON.stringify(config));
+        // });
+        // var xhr = new XMLHttpRequest();
+        // xhr.onreadystatechange = function () {
+        //     if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 400)) {
+        //         var response = xhr.responseText;
+        //         console.log(response);
+        //     }
+        // };
+        // xhr.open("GET", 'http://www.potato47.cn/config/test.json', true);
+        // xhr.send();
     }
 });

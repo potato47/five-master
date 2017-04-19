@@ -19,7 +19,8 @@ cc.Class({
         /**
          * 全局控制器
          */
-
+        const GameRule = require('GameRule');
+        app.gameRule = new GameRule();
     },
 
 

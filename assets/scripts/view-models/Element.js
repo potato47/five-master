@@ -80,6 +80,56 @@ cc.Class({
         this.updateTypeView();
     },
 
+    getElementOfSheng(){
+        switch(this.type){
+            case TYPE.METAL:return TYPE.WATER;
+            case TYPE.WATER:return TYPE.WOOD;
+            case TYPE.WOOD:return TYPE.FIRE;
+            case TYPE.FIRE:return TYPE.EARTH;
+            case TYPE.EARTH:return TYPE.METAL;
+        }
+        cc.log("getElementOfSheng is error!");
+        return TYPE.NONE;
+    },
+
+    getElementOfKe(){
+        switch(this.type){
+            case TYPE.METAL:return TYPE.WOOD;
+            case TYPE.WOOD:return TYPE.EARTH;
+            case TYPE.EARTH:return TYPE.WATER;
+            case TYPE.WATER:return TYPE.FIRE;
+            case TYPE.FIRE:return TYPE.METAL;
+        }
+        cc.log("getElementOfKe is error!");
+        return TYPE.NONE;
+    },
+
+    transformSheng(){
+        this.type = this.getElementOfSheng();
+        this.updateTypeView();
+    },
+
+    transformKe(){
+
+    },
+
+    hide() {
+        this.state = STATE.HIDE;
+        this.type = TYPE.NONE;
+        this.updateStateView();
+        this.updateTypeView();
+    },
+
+    select() {
+        this.state = STATE.SELECTED;
+        this.updateStateView();
+    },
+
+    cancelSelect() {
+        this.state = STATE.SHOW;
+        this.updateStateView();
+    },
+
     updateStateView() {
         switch (this.state) {
             case STATE.HIDE:
@@ -87,6 +137,10 @@ cc.Class({
                 break;
             case STATE.SHOW:
                 this.stateMask.active = false;
+                this.node.color = cc.Color.WHITE;
+                break;
+            case STATE.SELECTED:
+                this.node.color = cc.Color.GRAY;
                 break;
             default:
                 break;
